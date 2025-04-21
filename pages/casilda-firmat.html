@@ -10,7 +10,6 @@
 <body class="bg-light">
     <div class="container py-4">
         <h1 class="text-center mb-4">Horarios de Colectivos</h1>
-        <h2 class="text-center mb-3">Casilda - Firmat</h2>
 
         <ul class="nav nav-tabs mb-3 justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -27,9 +26,9 @@
             </li>
         </ul>
 
-        <div class="table-responsive">
+        <div id="contenedor-pdf" class="table-responsive">
+            <h2 class="text-center mb-3">Casilda - Firmat</h2>
             <table class="table table-striped table-bordered">
-                <thead class="table-dark">
                     <tr>
                         <th>Salida</th>
                         <th>Llegada</th>
@@ -55,7 +54,8 @@
                     <tr><td>20:30</td><td>21:27</td><td>LOS RANQUELES</td><td>Lunes a domingo</td><td>sábados no</td></tr>
                 </tbody>
             </table>
+            <button class="btn btn-danger" onclick="generarPDF('contenedor-pdf', 'horarios-casilda-firmat')">Generar PDF</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <script src="https://cdn
