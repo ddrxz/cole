@@ -1,0 +1,57 @@
+<div class="container py-4">
+    <h1 class="text-center mb-4">Horarios de Colectivos</h1>
+  
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <label for="origen" class="form-label">Origen</label>
+        <select id="origen" class="form-select">
+          <option value="">Seleccionar origen</option>
+          <option value="firmat">Firmat</option>
+          <option value="chabas">Chabas</option>
+          <option value="venado">Venado</option>
+          <option value="rosario">Rosario</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="destino" class="form-label">Destino</label>
+        <select id="destino" class="form-select">
+          <option value="">Seleccionar destino</option>
+          <option value="firmat">Firmat</option>
+          <option value="chabas">Chabas</option>
+          <option value="venado">Venado</option>
+          <option value="rosario">Rosario</option>
+        </select>
+      </div>
+      <div class="col-md-4 d-flex align-items-end">
+        <button class="btn btn-primary w-100" onclick="irAHorarios()">Ver horarios</button>
+      </div>
+    </div>
+  
+    <p class="text-center">Seleccioná origen y destino (uno debe ser Firmat).</p>
+  </div>
+  
+  <script>
+    function irAHorarios() {
+      const origen = document.getElementById("origen").value;
+      const destino = document.getElementById("destino").value;
+  
+      if (!origen || !destino) {
+        alert("Seleccioná ambos campos.");
+        return;
+      }
+  
+      if (origen === destino) {
+        alert("El origen y destino no pueden ser iguales.");
+        return;
+      }
+  
+      if (origen !== "firmat" && destino !== "firmat") {
+        alert("Uno de los dos debe ser Firmat.");
+        return;
+      }
+  
+      const url = `./pages/${origen}-${destino}.html`;
+      window.location.href = url;
+    }
+  </script>
+  
