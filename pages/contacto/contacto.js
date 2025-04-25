@@ -21,3 +21,17 @@ function handleSubmit(event) {
         alert("Error al enviar el formulario.");
     });
 }
+
+function handleSubmit(event) {
+    
+    const origen = document.getElementById('origen').value;
+    const destino = document.getElementById('destino').value;
+
+    if (origen !== 'Firmat' && destino !== 'Firmat') {
+        alert('Debe seleccionar "Firmat" en el campo de Origen o Destino.');
+        event.preventDefault(); 
+        return false;  
+    }
+    return true;  
+}
+
