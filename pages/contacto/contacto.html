@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+    <script src="contacto.js" defer></script>
+</head>
+<body>
+
+<h2>Formulario de Contacto</h2>
+<p>Por favor, complete el siguiente formulario para enviar un nuevo horario o corregir alguno horario.</p>
+
+<form action="https://formspree.io/f/mpwdwpyb" method="POST" onsubmit="handleSubmit(event)">
+    <label for="origen">Origen:</label>
+    <select id="origen" name="Origen" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Firmat">Firmat</option>
+        <option value="Chabás">Chabás</option>
+        <option value="Rosario">Rosario</option>
+        <option value="Venado Tuerto">Venado Tuerto</option>
+        <option value="Casilda">Casilda</option>
+    </select>
+
+    <label for="destino">Destino:</label>
+    <select id="destino" name="Destino" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Firmat">Firmat</option>
+        <option value="Chabás">Chabás</option>
+        <option value="Rosario">Rosario</option>
+        <option value="Venado Tuerto">Venado Tuerto</option>
+        <option value="Casilda">Casilda</option>
+    </select>
+
+    <label for="empresa">Empresa:</label>
+    <input type="text" id="empresa" name="Empresa" required>
+
+    <label for="salida">Horario de Salida:</label>
+    <input type="time" id="salida" name="Horario de Salida" required>
+
+    <label for="llegada">Horario de Llegada:</label>
+    <input type="time" id="llegada" name="Horario de Llegada" required>
+
+    <label for="dias">Días:</label>
+    <input type="text" id="dias" name="Dias" required placeholder="Ej: Lunes a Viernes">
+
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" name="Observaciones" rows="4" placeholder="Escriba aquí..." required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<br>
+<a href="../../index.html"><button class="volver-btn">Volver a inicio</button></a>
+
+
+</body>
+</html>
